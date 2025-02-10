@@ -1,0 +1,27 @@
+Before launching install dependencies:
+(in hockey_process directory)
+pip install -r requirements.txt
+
+To launch application:
+(in hockey_process directory):
+python ./hockey_process.py
+
+
+Usage:
+Set video using "Set Video" button.
+To record a video (frames are the same as at the top), press "Start recording video" and after recording press "Save the video". It will appear in "highlights" directory
+
+
+Models:
+There are 4 YOLO models:
+Main model — to detect and segment players (attacker, keeper), another_person (judge or really another person) and field.
+
+Keypoints model — to detect keypoints of the field: corners, notches, gate, T-like cross between perpendicular lines or arc and border.
+
+Classify model — model to classify candidates of players who are leading the ball at the moment. Though at current state it's also essential to track ball position.
+
+Ball model — a model to detect balls.
+
+
+Hockey image:
+hockey_field.jpg is downloaded from image search and I don't know it's licensing
